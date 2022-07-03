@@ -12,6 +12,7 @@
 }
 /*:::::menu*/
 .menu{
+    border-radius:20px;
 	list-style: none;
 	padding: 0;
 	background: #092327;
@@ -124,25 +125,16 @@ font-family: 'Dancing Script',cursive;
 /*::::: fin footer*/
 .videos{
     
-  
+    display: flex;
+    width:100%;
     justify-content:space-between;
     -ms-flex-align: center;
     border: 2px;
+    flex-wrap: wrap;
+    
  
 }
-@media screen and (max-width:800) {
-    .videos{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content:space-between;
-        -ms-flex-align: center;
-        border: 2px
-   
-   
-     
-    }
-    
-}
+
 .info-de-discografia{
     display: flex;
     -ms-flex-align: center;
@@ -278,7 +270,7 @@ background-image: url(../html/imagenesyvideos/fondointeg.jpg);
 }
 
 /*:::::pag de historia*/
-.container{
+.container s{
     
     
     height:calc(100vh - 20px - 300px);
@@ -287,7 +279,183 @@ background-image: url(../html/imagenesyvideos/fondointeg.jpg);
 .container-i{
     height:calc(75vh - 20px - 300px);
 }
+.container-j{
+    height:calc(40vh - 20px - 250px)
+}
 
 .container-h{
     height:calc(70vh - 20px - 300px);
 }
+.collapse navbar-collapse{
+     background-image: linear-gradient(to right top, #092327, #082a2e, #073235, #05393c, #034142, #024847, #01504c, #025751, #065f56, #0d685a, #16705e, #1f7961);
+
+}
+/*inicio slider*/
+body{
+    background-color: none;
+}
+
+#page-slider{
+ font-family: sans-serif;
+ margin: auto;
+ background-color:none;
+ max-width: 800px;
+ width: 100%;
+ padding: 30px;
+ box-sizing: border-box;
+}
+
+#page-slider > ul, li {
+    border-radius:40px;
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+
+
+#page-slider > ul.slider{
+ position: relative;
+ max-width: 800px;
+ width: 100%;
+ height: 300px;
+}
+
+#page-slider > ul.slider h1{
+ position: absolute;
+ background-color: rgba(255, 255, 255, 0.6);
+ padding: 10px;
+ left: 50%;
+ top: 100px;
+ transform: translate(-50%, -50%);
+}
+
+#page-slider > ul.slider li {
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   opacity: 0;
+   width: inherit;
+   height: inherit;
+   transition: opacity .5s;
+   background:#fff;
+}
+
+#page-slider > ul.slider li img{
+    border-radius:40px;
+ width: 100%;
+ height: 300px;
+ object-fit: cover;
+}
+
+#page-slider > ul.slider li:first-child {
+   opacity: 1; /*Mostramos el primer <li>*/
+}
+
+#page-slider > ul.slider li:target {
+   opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+#page-slider > .menu-slider{
+ text-align: center;
+ margin: 20px;
+}
+
+#page-slider > .menu-slider li{
+ display: inline-block;
+ text-align: center;
+}
+
+#page-slider > .menu-slider li a{
+ display: inline-block;
+ color: white;
+ text-decoration: none;
+ background-color: grey;
+ padding: 10px;
+ width: 20px;
+ height: 20px;
+ font-size: 20px;
+ border-radius: 100%;
+}
+/* slider*/
+/*discografia cards*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+/*Cards*/
+.container-card{
+	width: 100%;
+	display: flex;
+	max-width: 1100px;
+	margin: auto;
+}
+.title-cards{
+	width: 100%;
+	max-width: 1080px;
+	margin: auto;
+	padding: 20px;
+	margin-top: 20px;
+	text-align: center;
+    background-color:#092327;
+	color:white;
+    border-radius:40px;
+}
+.card{
+	width: 100%;
+	margin: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#0a1a2a;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+.card:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+.card img{
+	width: 100%;
+	height: 210px;
+}
+.card .contenido-card{
+	padding: 15px;
+	text-align: center;
+}
+.card .contenido-card h3{
+	margin-bottom: 15px;
+	color:white;
+}
+.card .contenido-card p{
+	line-height: 1.8;
+	color:white;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.card .contenido-card a{
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #2fb4cc;
+	border: 1px solid #2fb4cc;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+.card .contenido-card a:hover{
+	background: #2fb4cc;
+	color: #fff;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.container-card{
+		flex-wrap: wrap;
+	}
+	.card{
+		margin: 15px;
+	}
+}
+/*Fin-Cards*/
